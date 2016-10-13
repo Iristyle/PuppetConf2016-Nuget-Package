@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    ViewBag.ClusterName = System.Configuration.ConfigurationManager.AppSettings["ClusterName"];
+    ViewBag.PackageVersion = System.Configuration.ConfigurationManager.AppSettings["PackageVersion"];
+    ViewBag.Host = System.Net.Dns.GetHostName();
+    ViewBag.IPs = System.Net.Dns.GetHostAddresses(System.Net.Dns.GetHostName())
+        .Select(ip => ip.ToString());
+        
+}
+
+<div class="jumbotron">
+    <img src="~/Content/Puppy_Labs_Chew_Toys.jpg" />
+</div>
