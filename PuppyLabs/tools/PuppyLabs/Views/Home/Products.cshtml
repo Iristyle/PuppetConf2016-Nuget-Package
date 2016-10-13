@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Products";
+    ViewBag.ClusterName = System.Configuration.ConfigurationManager.AppSettings["ClusterName"];
+    ViewBag.PackageVersion = System.Configuration.ConfigurationManager.AppSettings["PackageVersion"];
+    ViewBag.Host = System.Net.Dns.GetHostName();
+    ViewBag.IPs = System.Net.Dns.GetHostAddresses(System.Net.Dns.GetHostName())
+        .Select(ip => ip.ToString());
+
+    var foo = 5 / 0;
+}
+<h2>@ViewBag.Title.</h2>
+
+<p>Use this area to provide additional information.</p>
